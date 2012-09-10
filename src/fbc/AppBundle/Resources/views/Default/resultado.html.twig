@@ -1,0 +1,26 @@
+{% extends 'fbcAppBundle:Default:index.html.twig' %}
+
+{% block title %}Free Betta Control{% endblock %}
+
+{% block h1 %}Resultados de la búsqueda: {{keywords}}{% endblock %}
+
+{% block opciones %}
+<ul data-role="controlgroup" data-type="horizontal">
+    <li><a href="{{path('nuevoBetta')}}" title="Registrar nuevo betta" data-role="button" data-icon="add" data-theme="b">Nuevo Betta</a></li>
+    <li><a href="{{path('nuevaPuesta')}}" title="Registrar nueva puesta" data-role="button" data-icon="add" data-theme="b">Nueva Puesta</a></li>
+    <li><a href="#" title="" data-role="button" data-icon="gear" data-theme="b">Registro masivo</a></li>
+</ul>
+{% endblock %}
+
+{% block contenido %}
+
+<ul class="margen1pc" data-role="listview" data-inset="true" data-dividertheme="f" data-theme="c">
+{% for betta in resultadoBettas %}
+        <li><a href="{{path('betta',{'id':betta.idBetta}) }}" title="">{{betta.codBetta}}</a></li>
+{% endfor %}
+</ul>
+{% for puesta in resultadoPuestas %}
+{% endfor %}
+
+
+{% endblock %}

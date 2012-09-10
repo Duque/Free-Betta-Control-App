@@ -1,0 +1,51 @@
+escritorio:
+    pattern: /app/escritorio
+    defaults: { _controller: fbcAppBundle:Escritorio:index }
+
+bettas:
+    pattern: /app/bettas
+    defaults: { _controller: fbcAppBundle:Bettas:index }
+    
+betta:
+    pattern: /app/betta/{id}
+    defaults: { _controller: fbcAppBundle:Betta:index }
+    
+puestas:
+    pattern: /app/puestas
+    defaults: { _controller: fbcAppBundle:Puestas:index }
+    
+puesta:
+    pattern: /app/puesta/{id}
+    defaults: { _controller: fbcAppBundle:Puesta:index }
+    
+nuevoBetta:
+    pattern: /app/nuevo_betta
+    defaults: { _controller: fbcAppBundle:Betta:nuevo }
+    
+borrarBetta:
+    pattern: /app/borrarBetta/{id}
+    defaults: { _controller: fbcAppBundle:Betta:borrarBetta }
+    
+confirmarBorradoBetta:
+    pattern: /app/confirmar_borrado_betta/{id}/{codBetta}
+    defaults: { _controller: fbcAppBundle:Betta:confirmarBorradoBetta }
+    
+nuevaPuesta:
+    pattern: /app/nueva_puesta
+    defaults: { _controller: fbcAppBundle:Puesta:nuevaPuesta }
+    
+borrarPuesta:
+    pattern: /app/borrar_puesta/{id}
+    defaults: { _controller: fbcAppBundle:Puesta:borrarPuesta }
+    
+confirmarBorradoPuesta:
+    pattern: /app/confirmar_borrado_puesta/{id}/{codPuesta}
+    defaults: { _controller: fbcAppBundle:Puesta:confirmarBorradoPuesta }
+    
+buscar:
+    pattern: /app/buscar
+    defaults: { _controller: fbcAppBundle:Buscar:index }
+    
+resultados:
+    pattern: /app/resultado_busqueda
+    defaults: { _controller: fbcAppBundle:Buscar:resultados }

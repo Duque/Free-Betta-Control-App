@@ -1,0 +1,56 @@
+{% extends 'fbcAppBundle:Default:index.html.twig' %}
+
+{% block title %}FBC Registrar nuevo betta{% endblock %}
+
+{% block h1 %}Registrar nuevo betta{% endblock %}
+
+{% block contenido %}
+    <form action="{{path('nuevoBetta')}}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}{#Mostramos errores generales de formulario#}
+        <ul class="margen1pc"  data-role="listview" data-inset="true">
+            <li>
+                {{ form_label(form.codBetta,'Código') }}
+                {{ form_errors(form.codBetta) }}
+                    <div class="elementoForm">{{ form_widget(form.codBetta) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.sexo,'Sexo') }}
+                {{ form_errors(form.sexo) }}
+                    <div class="elementoForm">{{ form_widget(form.sexo, {'attr':{'data-role':'slider' } }) }}</div>
+                
+            </li>
+            <li>
+                {{ form_label(form.fenotipoAletas,'Fenotipo Aletas') }}
+                {{ form_errors(form.fenotipoAletas) }}
+                    <div class="elementoForm">{{ form_widget(form.fenotipoAletas) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.genotipoAletas,'Genotipo Aletas') }}
+                {{ form_errors(form.genotipoAletas) }}
+                    <div class="elementoForm">{{ form_widget(form.genotipoAletas) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.fenotipoColor,'Fenotipo Color') }}
+                {{ form_errors(form.fenotipoColor) }}
+                    <div class="elementoForm">{{ form_widget(form.fenotipoColor) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.genotipoColor,'Genotipo Color') }}
+                {{ form_errors(form.genotipoColor) }}
+                    <div class="elementoForm">{{ form_widget(form.genotipoColor) }}</div>
+            </li>
+            <li>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                {{ form_label(form.fechaRegistro,'Registrado') }}
+                {{ form_errors(form.fechaRegistro) }}
+                        <div class="elementoForm">{{ form_widget(form.fechaRegistro) }}</div>
+                </fieldset>
+            </li>
+            <li><input type="submit" value="Registrar" data-role="button" data-theme="b"/></li>
+        </ul>
+            {{ form_rest(form) }}{#Cargamos el resto de campos (olvidados u ocultos#}
+
+        
+
+    </form>
+{% endblock %}

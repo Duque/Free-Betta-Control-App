@@ -1,0 +1,69 @@
+/*  CLASES ********************************************************************/
+
+/* Margen general de 1% */
+.margen1pc {
+    display:block;
+    width:98%;
+    margin:1% 0% 1% 1%;
+}
+
+/*Centrar el contenido*/
+.centrarContenido {
+    text-align:center;
+}
+
+/*Corrección de los formularios*/
+.elementoForm {
+    width:75%!important;
+    margin:auto;
+}
+
+/* Zona de controles*/
+#control {
+    overflow: hidden;
+}
+#opciones {
+    margin: 0% 0% 0% 1%;
+    width: 45%;
+    float:left;
+}
+#buscador {
+    width:45%;
+    float:right;
+    text-align:right;
+}
+#buscador li {
+    margin:0% 2% 0% 0%;
+    display:inline-block;
+    width:auto!important;
+}
+
+/*Colores*/
+.enlace {
+    color:#2489CE;
+}
+
+
+/* CLASES DE jQuery Mobile ****************************************************/
+
+/* Cuadros de dialogo jQuery Mobile */
+.ui-dialog .ui-header, 
+.ui-dialog .ui-content, 
+.ui-dialog .ui-footer { 
+	max-width: 500px; 
+	margin: 10% auto 15px auto; 
+}
+
+/* ancho del slider jQuery Mobile */
+.ui-field-contain div.ui-slider-switch { 
+    width: 200px!important;
+}
+
+.containing-element .ui-slider-switch {
+    width:200px!important;
+}
+
+/* grupo de botones en horizontal */
+.ui-controlgroup-controls li {
+    overflow:visible!important;
+}

@@ -1,0 +1,14 @@
+{% extends 'fbcAppBundle:Default:confirmarBorrado.html.twig' %}
+
+{%block title%}Confirmar borrado {{ codPuesta }} {%endblock%}
+
+{% block h1 %}Atención!{% endblock %}
+
+{% block contenido %}
+
+<h2>Borrar: {{codPuesta}}?</h2>
+
+<a href="{{path('borrarPuesta',{'id':id})}}" title="borrar" data-role="button" data-inline="true" data-theme="b">Borrar</a>
+<a href="{{path('puestas')}}" title="Volver a la pagina de bettas" data-role="button" data-inline="true" data-theme="b">Cancelar</a>
+
+{% endblock %}

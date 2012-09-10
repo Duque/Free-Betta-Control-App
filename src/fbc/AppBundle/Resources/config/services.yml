@@ -1,0 +1,7 @@
+parameters:
+#    fbc_app.example.class: fbc\AppBundle\Example
+
+services:
+#    fbc_app.example:
+#        class: %fbc_app.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

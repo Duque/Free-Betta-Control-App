@@ -1,0 +1,12 @@
+<form action="{{path('resultados')}}" method="get" {{ form_enctype(form) }}>
+{{ form_errors(form) }}{#Mostramos errores generales de formulario#}
+<ul>
+    <li>
+        {{ form_label(form.keywords,'') }}
+        {{ form_errors(form.keywords) }}
+        {{ form_widget(form.keywords, {'attr':{'placeholder':'Terminos de búsqueda'} }) }}
+    </li>
+    <li><input type="submit" value="Buscar" data-inline="true" data-icon="search" data-theme="b" class="submit"></li>
+</ul>
+{{ form_rest(form) }}{#Cargamos el resto de campos (olvidados u ocultos#}
+</form>

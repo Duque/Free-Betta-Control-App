@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="fbc\AppBundle\Entity\Bettas" table="bettas">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="idBetta" type="integer" column="id_betta">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="codBetta" type="string" column="cod_betta" length="50"/>
+    <field name="idPuesta" type="integer" column="idPuesta"/>
+    <field name="fenotipoAletas" type="string" column="fenotipoaletas"/>
+    <field name="genotipoAletas" type="string" column="genotipoAletas"/>
+    <field name="fenotipoColor" type="string" column="fenotipoColor"/>
+    <field name="genotipoColor" type="string" column="genotipoColor"/>
+    <field name="sexo" type="string" column="sexo" length="1"/>
+    <field name="imagenesBetta" type="string" column="imagenes_betta"/>
+    <field name="fechaRegistro" type="date" column="fecha_registro"/>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

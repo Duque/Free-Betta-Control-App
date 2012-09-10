@@ -1,0 +1,22 @@
+fbc\AppBundle\Entity\Bettas:
+    properties:
+        codBetta:
+            - NotBlank: ~
+            
+        fenotipoAletas:
+            - NotBlank: ~
+        
+        genotipoAletas:
+            - NotBlank: ~
+            
+        fenotipoColor:
+            - NotBlank: ~
+            
+        genotipoColor:
+            - NotBlank: ~
+            
+        sexo:
+            - NotBlank: ~
+           
+        fechaRegistro:
+            - NotBlank: ~

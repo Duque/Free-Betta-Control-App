@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="fbc\AppBundle\Entity\Puestas" table="puestas">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="idPuesta" type="integer" column="id_puesta">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="codPuesta" type="string" column="cod_puesta" length="100"/>
+    <field name="idPadre" type="integer" column="id_padre"/>
+    <field name="idMadre" type="integer" column="id_madre"/>
+    <field name="huevos" type="integer" column="huevos"/>
+    <field name="eclosiones" type="integer" column="eclosiones"/>
+    <field name="tasaSupervivencia" type="integer" column="tasaSupervivencia"/>
+    <field name="imagenesPuesta" type="integer" column="imagenes_puesta"/>
+    <field name="fechaInicio" type="date" column="fecha_inicio"/>
+    <field name="fechaCruce" type="date" column="fecha_cruce"/>
+    <field name="fechaEclosion" type="date" column="fecha_eclosion"/>
+    <field name="sexRatio" type="integer" column="sexRatio"/>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,78 @@
+{% extends 'fbcAppBundle:Default:index.html.twig' %}
+
+{% block title %}Registrar nueva puesta{% endblock %}
+
+{% block h1 %}Registrar nueva puesta{% endblock %}
+
+{% block contenido %}
+    <form action="{{path('nuevaPuesta')}}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}{#Mostramos errores generales de formulario#}
+        <ul class="margen1pc"  data-role="listview" data-inset="true">
+            <li>
+                {{ form_label(form.codPuesta,'Código') }}
+                {{ form_errors(form.codPuesta) }}
+                    <div class="elementoForm">{{ form_widget(form.codPuesta) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.idPadre,'Id padre') }}
+                {{ form_errors(form.idPadre) }}
+                    <div class="elementoForm">{{ form_widget(form.idPadre) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.idMadre,'id madre') }}
+                {{ form_errors(form.idMadre) }}
+                    <div class="elementoForm">{{ form_widget(form.idMadre) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.huevos,'Huevos') }}
+                {{ form_errors(form.huevos) }}
+                    <div class="elementoForm">{{ form_widget(form.huevos) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.eclosiones,'Eclosiones') }}
+                {{ form_errors(form.eclosiones) }}
+                    <div class="elementoForm">{{ form_widget(form.eclosiones) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.tasaSupervivencia,'Tasa supervivencia') }}
+                {{ form_errors(form.tasaSupervivencia) }}
+                    <div class="elementoForm">{{ form_widget(form.tasaSupervivencia) }}</div>
+            </li>
+            <li>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                {{ form_label(form.fechaInicio,'Fecha inicio') }}
+                {{ form_errors(form.fechaInicio) }}
+                        <div class="elementoForm">{{ form_widget(form.fechaInicio, {'attr':{'value':"now"|date("m/d/Y")} }) }}</div>
+                {# form_widget(form.fechaRegistro, {'attr':{'value':betta.fechaRegistro } }) #}
+                </fieldset>
+            </li>
+            <li>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                {{ form_label(form.fechaCruce,'Fecha cruce') }}
+                {{ form_errors(form.fechaCruce) }}
+                        <div class="elementoForm">{{ form_widget(form.fechaCruce) }}</div>
+                {# form_widget(form.fechaRegistro, {'attr':{'value':betta.fechaRegistro } }) #}
+                </fieldset>
+            </li>
+            <li>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                {{ form_label(form.fechaEclosion,'Fecha eclosión') }}
+                {{ form_errors(form.fechaEclosion) }}
+                        <div class="elementoForm">{{ form_widget(form.fechaEclosion) }}</div>
+                {# form_widget(form.fechaRegistro, {'attr':{'value':betta.fechaRegistro } }) #}
+                </fieldset>
+            </li>
+            <li>
+                {{ form_label(form.sexRatio,'Sex ratio') }}
+                {{ form_errors(form.sexRatio) }}
+                    <div class="elementoForm">{{ form_widget(form.sexRatio) }}</div>
+            </li>
+            <li><input type="submit" value="Registrar" data-role="button" data-theme="b"/></li>
+           
+        </ul>
+            {{ form_rest(form) }}{#Cargamos el resto de campos (olvidados u ocultos#}
+
+        
+
+    </form>
+{% endblock %}

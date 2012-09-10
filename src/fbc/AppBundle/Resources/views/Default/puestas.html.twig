@@ -1,0 +1,30 @@
+{% extends 'fbcAppBundle:Default:index.html.twig' %}
+
+{% block title %}Resumen general de puestas{% endblock %}
+
+{% block h1 %}Resumen general de puestas{% endblock %}
+
+
+
+{% block opciones %}
+    <ul class="margen1pc" data-role="controlgroup" data-type="horizontal" >
+        <li><a href="{{path('nuevaPuesta')}}" title="Registrar nueva puesta" data-role="button" data-icon="add" data-theme="b">Nueva Puesta</a></li>
+        <li><a href="#" title="" data-role="button" data-icon="gear" data-theme="b">Registro masivo</a></li>
+    </ul>
+{% endblock %}
+
+{% block contenido %}
+    <ul class="margen1pc" data-role="listview" data-inset="true" data-dividertheme="c" data-theme="c">        
+{% for puesta in puestas %}
+            <li>
+                <a href="{{path('puesta',{'id':puesta.idPuesta})}}"
+                   title="Ampliar información sobre {{puesta.codPuesta}}">
+                   {{ puesta.codPuesta }}</a>
+            {# puesta.fechaEclosion|date("d/M/Y") #}
+                    <a href="{{path('confirmarBorradoPuesta',{'id':puesta.idPuesta,'codPuesta':puesta.codPuesta})}}" 
+               title="Borrar {{puesta.codPuesta}}" data-rel="dialog" data-transition="fade" data-icon="delete" data-theme="a">Borrar {{puesta.codPuesta}}</a>
+{% endfor %}
+            </li>
+        </ul>
+
+{% endblock %}

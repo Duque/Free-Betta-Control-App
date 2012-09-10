@@ -1,0 +1,26 @@
+{% extends 'fbcAppBundle:Default:index.html.twig' %}
+
+{% block title %}Resumen general de ejemplares{% endblock %}
+
+{% block h1 %}Resumen general de ejemplares{% endblock %}
+
+{% block opciones %}
+<ul class="margen1pc" data-role="controlgroup" data-type="horizontal">
+    <li><a href="{{path('nuevoBetta')}}" title="Registrar nuevo betta" data-role="button" data-icon="add" data-theme="b">Nuevo Betta</a></li>
+    <li><a href="#" title="" data-role="button" data-icon="gear" data-theme="b">Registro masivo</a></li>
+</ul>
+{% endblock %}
+{% block contenido %}
+<ul class="margen1pc" data-role="listview" data-inset="true" data-dividertheme="f" data-theme="c">
+       {% for betta in bettas %}
+        <li><a href="{{path('betta',{'id':betta.idBetta})}}" 
+               title="Ampliar información sobre {{betta.codBetta}}">
+            {{ betta.codBetta }}</a>
+            <a href="{{path('confirmarBorradoBetta',{'id':betta.idBetta,'codBetta':betta.codBetta})}}" 
+               title="Borrar {{betta.codBetta}}" data-rel="dialog" data-transition="fade" data-icon="delete" data-theme="a">Borrar {{betta.codBetta}}</a>
+        </li>
+
+        {#{ betta.fechaRegistro|date("d/M/Y")#}
+        {% endfor %}
+        </ul>
+{% endblock %}

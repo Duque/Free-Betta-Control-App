@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+{%block title%}Confirmar borrado{%endblock%}
+        </head>
+
+        <body>
+            <div data-role="page" data-overlay-theme="c">
+                <header data-role="header" data-theme="a">
+                    <h1>{% block h1 %}No se ha podido cargar la etiqueta h1{% endblock %}</h1>
+                </header>
+                <section class="margen1pc centrarContenido">
+                {% block contenido %}No se ha podido cargar el contenido{% endblock %}
+                </section>
+            </div>
+        </body>
+    </html>

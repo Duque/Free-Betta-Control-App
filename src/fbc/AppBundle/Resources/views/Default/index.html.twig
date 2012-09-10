@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    {%block title%}{%endblock%}
+    {%block meta%}
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%endblock%}
+    {%block css%}
+            <link href="{{ asset('css/reset.css') }}" type="text/css" rel="stylesheet" />
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+            <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('css/fbc.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('css/fbc.min.css') }}" type="text/css" rel="stylesheet" />
+    {%endblock%}
+    {%block js%}
+            <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    {%endblock%}
+        </head>
+
+        <body>
+            <div data-role="page">
+                <header data-role="header">
+                    <aside data-role="navbar">
+            {% block menu %}
+                            <ul data-role="navbar">
+                                <li><a href="{{path('escritorio')}}" data-role="button" data-icon="home" data-iconpos="right" data-theme="b"><h3>Escritorio</h3></a></li>
+                                <li><a href="{{path('bettas')}}" data-theme="b"><h3>Bettas</h3></a></li>
+                                <li><a href="{{path('puestas')}}" data-theme="b"><h3>Puestas</h3></a></li>
+                            </ul>
+            {%endblock%}
+                        </aside>
+                        <h1>{% block h1 %}Fallo al cargar la etiqueta &LT;h1&GT;{% endblock %}</h1>
+                    </header>
+                    <section id="control">
+                        <article id="opciones">
+                            {% block opciones %}{%endblock%}
+                        </article>
+                        <article id="buscador">
+                            {# Cuadro de búsqueda #}
+                            {% render "fbcAppBundle:Buscar:index" %}{# render "fbcAppBundle:Buscar:index" with {'max': 3} #}
+                        </article>
+                    </section>
+                    <section>{% block contenido %}No se ha podido cargar el contenido{% endblock %}</section>
+                    <footer data-role="footer" class="ui-bar">
+            {%block pie%}<h5>Free Betta Control 1.0. - Blog <a href="http://www.betta-halfmoon-madrid.com" title="Ir a Betta Halfmoon Madrid" target="_blank">www.betta-halfmoon-madrid.com</a></h5>{%endblock%}
+                        </footer>
+                    </div>
+                </body>
+            </html>
