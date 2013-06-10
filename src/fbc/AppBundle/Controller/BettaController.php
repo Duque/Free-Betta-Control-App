@@ -54,16 +54,17 @@ class BettaController extends Controller {
 
         //Si request se ha invocado por "Post"...
         if ($request->getMethod() == 'POST') {
-            //Cargamos el objeto $bettaForm con los datos del formulario
+            //Cargamos el objeto $betta con los datos del formulario
             $form->bindRequest($request);
 
 
             if ($form->isValid()) { //Y Si el form es válido...
-                //Al incluir fotos y puestas quitar estas 2 lineas
+                //Falta terminar el tema de asignar puestas
                 $betta ->setIdPuesta(-1); 
-                $betta ->setImagenesBetta(-1);
-                
-                //Guardamos en la base de datos
+                //ES NECESARIO CAMBIAR LAS RUTAS HARDCODEADAS
+                //movemos la imagen cargada
+                //$form['imagenesBetta']->getData()->move('/var/www/fbc/web/uploads/'.$betta->getCodBetta(), $betta->getCodBetta().'.jpg');
+                //Guardamos en la base de datos                
                 $em->persist($betta);
                 $em->flush();
 
