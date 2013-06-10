@@ -11,41 +11,56 @@
             <li>
                 {{ form_label(form.codBetta,'Código') }}
                 {{ form_errors(form.codBetta) }}
-                    <div class="elementoForm">{{ form_widget(form.codBetta) }}</div>
+                <div class="elementoForm">{{ form_widget(form.codBetta) }}</div>
             </li>
             <li>
                 {{ form_label(form.sexo,'Sexo') }}
                 {{ form_errors(form.sexo) }}
-                    <div class="elementoForm">{{ form_widget(form.sexo, {'attr':{'data-role':'slider' } }) }}</div>
+                <div class="elementoForm">{{ form_widget(form.sexo, {'attr':{'data-role':'slider' } }) }}</div>
                 
             </li>
             <li>
                 {{ form_label(form.fenotipoAletas,'Fenotipo Aletas') }}
                 {{ form_errors(form.fenotipoAletas) }}
-                    <div class="elementoForm">{{ form_widget(form.fenotipoAletas) }}</div>
+                <div class="elementoForm">{{ form_widget(form.fenotipoAletas) }}</div>
             </li>
             <li>
-                {{ form_label(form.genotipoAletas,'Genotipo Aletas') }}
-                {{ form_errors(form.genotipoAletas) }}
-                    <div class="elementoForm">{{ form_widget(form.genotipoAletas) }}</div>
+                {{ form_label(form.padreGenotipoAletas,'Genotipo Aletas del padre') }}
+                {{ form_errors(form.padreGenotipoAletas) }}
+                <div class="elementoForm">{{ form_widget(form.padreGenotipoAletas) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.madreGenotipoAletas,'Genotipo Aletas de la madre') }}
+                {{ form_errors(form.madreGenotipoAletas) }}
+                <div class="elementoForm">{{ form_widget(form.madreGenotipoAletas) }}</div>
             </li>
             <li>
                 {{ form_label(form.fenotipoColor,'Fenotipo Color') }}
                 {{ form_errors(form.fenotipoColor) }}
-                    <div class="elementoForm">{{ form_widget(form.fenotipoColor) }}</div>
+                <div class="elementoForm">{{ form_widget(form.fenotipoColor) }}</div>
             </li>
             <li>
-                {{ form_label(form.genotipoColor,'Genotipo Color') }}
-                {{ form_errors(form.genotipoColor) }}
-                    <div class="elementoForm">{{ form_widget(form.genotipoColor) }}</div>
+                {{ form_label(form.padreGenotipoColor,'Genotipo Color del padre') }}
+                {{ form_errors(form.padreGenotipoColor) }}
+                <div class="elementoForm">{{ form_widget(form.padreGenotipoColor) }}</div>
+            </li>
+            <li>
+                {{ form_label(form.madreGenotipoColor,'Genotipo Color de la madre') }}
+                {{ form_errors(form.madreGenotipoColor) }}
+                <div class="elementoForm">{{ form_widget(form.madreGenotipoColor) }}</div>
             </li>
             <li>
                 <fieldset data-role="controlgroup" data-type="horizontal">
                 {{ form_label(form.fechaRegistro,'Registrado') }}
                 {{ form_errors(form.fechaRegistro) }}
-                        <div class="elementoForm">{{ form_widget(form.fechaRegistro) }}</div>
+                <div class="elementoForm">{{ form_widget(form.fechaRegistro) }}</div>
                 </fieldset>
             </li>
+            <!--<li>
+                {{ form_label(form.imagenesBetta,'Subir imagen') }}
+                {{ form_errors(form.imagenesBetta) }}
+                <div class="elementoForm">{{ form_widget(form.imagenesBetta) }}</div>
+            </li>-->
             <li><input type="submit" value="Registrar" data-role="button" data-theme="b"/></li>
         </ul>
             {{ form_rest(form) }}{#Cargamos el resto de campos (olvidados u ocultos#}
