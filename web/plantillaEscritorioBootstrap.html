@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plantilla Free Betta Control</title>
+
+        <!-- Metas -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aplicación gratuíta para el control de población de bettas">
+        <meta name="author" content="Raúl Duque">
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Menú superior -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    </button>
+                    <a href="#" title="Ir al inicio" class="brand">Free Betta Control</a>
+                    <div class="nav-collapse collapse">
+
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                                    <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="i"></i> Make admin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="nav">
+                            <li class="active"><a href="#">Escritorio</a></li>
+                            <li><a href="#">Bettas</a></li>
+                            <li><a href="#">Puestas</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contenedor principal -->
+        <div class="container-fluid">
+            <div class="row-fluid">
+
+                <!-- Columna izquierda -->
+                <div class="span3">
+
+                    <!-- Menú principal -->
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="#" title="Registrar nuevo betta">Nuevo betta</a></li>
+                        <li><a href="#" title="Registrar nueva puesta">Nueva puesta</a></li>
+                        <li><a href="#" title="Crear un registro masivo a partir de una puesta">Registro masivo</a></li>
+                    </ul> 
+
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="#">Últimos bettas añadidos</a></li>
+                        <li><a href="#">Últimas puestas añadidas</a></li>
+                        <li><a href="#">Último registro maivo</a></li>
+                    </ul>
+
+
+
+
+                </div>
+
+
+                <!-- Columna derecha -->
+                <div class="span9">
+
+                    <!-- migas de pan -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Inicio</a> <span class="divider">/</span></li>
+                        <li><a href="#">Escritorio</a> <span class="divider">/</span></li>
+                        <li class="active">Resumen general</li>
+                    </ul>
+
+
+                    <!-- Panel de puestas -->
+                    <div class="panel">
+                        <div class="alert alert-info"><strong>Información importante:</strong> Los alevines de la puesta <a href="#" title="">(Código de la puesta)</a> han deberían haber acabasdo el laberinto: 26 Abril 2013</div>
+                        <p class="lead">Puestas activas<p>
+
+                        <ul class="media-list">
+                            <li class="media alert alert-warning">
+                                <p>Progreso de la puesta</p>
+                                <!-- barra de progreso -->
+                                <div class="progress">
+
+                                    <div class="bar bar-danger" style="width: 10%;"></div>                                                                                  
+                                </div>
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" width="100" src="data:image/jpeg;base64,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">
+                                </a>
+                                <div class="media-body">
+                                    <div class="span6">
+                                        <h4 class="media-heading">(Código de la puesta)</h4>
+                                        <p><a href="#" title="Acceder a la ficha de HMPK Fancy Dragon MC001">Ficha</a></p>
+                                        <p><span class="label label-warning">Atención</span> Los alevines nadarán en horizontal mañana, <strong>fecha: 13/05/2013</strong></p>
+                                        <p><span class="label label-info">Última nota</span> Última nota apuntada, fecha: 13/05/2013</p>    
+                                    </div>
+                                    <div class="span6">
+                                        <div class="panel">
+                                            <ul>
+                                                <li>Fecha</li>
+                                                <li>Huevos</li>
+                                                <li>Tasa de supervivencia</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="media well well-small">
+                                <p>Progreso de la puesta</p>
+                                <!-- barra de progreso -->
+                                <div class="progress">
+                                    <div class="bar bar-danger" style="width: 10%;"></div>
+                                    <div class="bar bar-warning" style="width: 20%;"></div>                                                                                             
+                                </div>
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" width="100" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBg8QEBAQDxAPDw8PEA8PEA8PDw8OEA8QFBAVFBQQFRQXHCYeFxkjGRUUHy8gIycpLSwsFR4xNTAqNSYrLCkBCQoKDgwOFw8PFykcHBwpKSkpLCkpKSkqKSkpKSwpKSktKSkpKSkpKSkpKSkpKSkpKSkpKSksKSkpKSkpKSksKf/AABEIALEBHAMBIgACEQEDEQH/xAAcAAEBAAIDAQEAAAAAAAAAAAAAAQUGAwQHAgj/xAA4EAABBAAEBAQEBAYCAwEAAAABAAIDEQQSITEFBkFREyJhcTJCgZEHFFKhI2KxweHwctFDc5IV/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAEDBAIFBv/EACgRAQACAgIBBAEDBQAAAAAAAAABAgMREiExBBNBUTIUInEFFWHB0f/aAAwDAQACEQMRAD8A8SVCBEZqiIgIiIgqoqqCIiCIvpKQRKVpWlBAiFRUVRVAmhKRVRQERFQREQEREEREUUREQRVEQKUVQoPlFUVBVEUBERVFUVpEBAiqAiKKEiqBFQVUQKCqEKoivlVCiu3kCUlKoqUqiiAiIoIiFEBRVQqgiIooiqiAiKICIioqIiAiqloioiICqgQIFLbOVuSRiGCfEudHCT/DYzSSUD57Pwsux3NFa9wvh7p5WRM3cdSTQa35nE+y9YjcxrI42fCxrWDpQAoALxadDGS8m8PArwCfUzy5vvax+I/DiF5b4E74S52onAkY0HsWgHT1W2QxfNlztb0PUr7ncwAFzgSd2i7Cx5rqXnfN/wCHeJ4dTnPZPEWh3iRAgZT81WbH9Fqy9jx+HE0ZaaYMpA0sjStivJuJ8Nkw8hikGoAII1DmnZwPZa1tsdVAiL2giIgIiFAUtECBSqIgiiFRBVCqloIiIgIiIoiKICIioqJaIgiqiAiKoAVtQJSDK8CaTI3Lu17CaPy3r/vqvRAwtsHQitOuoBH7ELy7ATlksbgapzfsTRH2tehYTFEEdzuPTZZ3I8tu4dLUdAg30/ujmHUFrXF1DNlsgenZYrC4rL10q66hZmDGuAB0oihoNq3XJLbTruwx+IMLgLBC17jvAxjI/D8rZWEmF5+RxOrD/KdvsVmcTi3HVx20AFj7LouzDUWD6r1WUtDyWWJzHOY8Fr2OLXNO7XA0R918rYedsAY8T4tU3EsEljYyDyyD3sAn/kteXXE7hmKrNcP5OxkwDsgiY7Z0xyE+oZ8X7LZOF8gYUFoxMr5HkgBjHNhY4n5RfmP3Ccog/loB+imYd17Z/wDgYPD5fChgZY+LwwX3sWkuF2DY+iy+A4S94vVoH00XjmPz6CO4RfofF8pYeZp8eKF/lIa58THuZY3BOtryLnrkiTh72yAZsLM5zYpBdNeNTE69jWo7i+ysWiUaqERF7EpRfQUKKihVUVREVRRRES0BRLRARAioqJaKC0oiILSAKhZ3l3lgYq3PxMGHjbuZHDOR3azqvdazbqGWTJXHXlbwxWE4dNLfhRSS1qfDY59e9bLuYXlnGyuLI8NO54BOUsLDQ3rNV/Rb9w+CfAlreEF8jq/i4h8RySDsWHt0IWxYHEycRayKfESQYmN+dhADQXiwKIAPXZWYrHmXLGfNfulY1PjbxPF4GWF2WaOSF2oqRjmGxvVjVbHh+LggE6UNPW16e7CTNke3EVjGtaY54JmZ2PZVZ498rq7brz3nDkv8kYZIy92GnBLC7UscCSY79BW+qxvNfiXVim9vzrqf8eHdweJB8wBcMotxND3WewmLJBABvQafC2+pWj8LxW4OrgNB8rRe62fAyEZaeASA4jcDt9Vz3jTsq2GXDAEAvZt8VEgf5XVa3cHX1OlrtQYMyNBLiSbLWgan1K4XxkEg/E3cuO3pSyie1mGE5h4OMREYtA6w+CyRlnAII1+V4oH/AIgrr8vcrwYapHjxsQBo8/BGepa3a/UrPzxNeAHO0tpzfDRa4EELHzOLS4B15CBdEWP9r7rbl0wmHbxD3aEb35s5qvX1Wkc3Pl8cPa7y5Whmt3pRA+vT1XomHwcczQ4kitmgb+6+sBgWMmDixpDXg5SAQDejqPULKPURE6h0fppmu15Y4NK4wslLnPrPIX246DMbJ+y3PjE3hM8KJvmvzkaBumwXUw2KZE+WUnQRa+pdK0f2KxGJ48XZvVznWdSSTZWdss2npaYOu2Yjkc6Fxo00WT7LB81RDE8J4jG91+HB+ajqiWvhcH3r3Gns4rceHTRQ4dpfq5wt4PcjUey8n5s5ibBFj42GxLFLho2knaSRrSfoyz9FrxndZiUmI1O4eTkKUqou1zC+Svq1ERESlEBERCBRVEVEAREBFFVVWkRZrhHLzpQ1xo5/ga12p1rzaaaqJOoYVVbhxPkVrA0CR0U9eeOQZo2noMw81etFY2fkXiLNfyznt3zRvjkBB2IAN/spyg0wTQs9w/hj3OYzJnG/l1OqwzonxuAex0bgdpGlp/dZ/lvjcsErZGjOGkEtug4dleXXTxMblucHEMTA+NkBc3MQ0MeNLJr6arbeOYTBxjCjibvyuImkGrBdBvzktuq01Omqw/GuKnh+NgccOJPzEbJHRT2fyhc4eZjmWHV6rHc2MnxGOL5cmJifkLXU5hjj6xh2nqdv88kZqxfjMeY3v/Tf2t15R8S36biEmDmGHyvxeHxLGDD4hoaZGF2gDj841GuiwH4g8BlPDJM7w7E4aTxWQtBt8emd1dTlJN/yrm4lxuPxYXwZ/wCAzI0PJo9r7kd1gOM8wzym3vcaBG9mu3svNMvOsWmNT9PftTW3Ty+DF/MLFVY7raOFcRtuga3NuSdmgf791guI8PDXOczYkmu1rqQzlpGuh/Zb7i0Lri9N4bxQkgguc6rsHKGt2Xde4vPiChV6HXX/ALWi4Xi5AoOAHlGnQdgs9Fxga9GtG+9lc81mHvyzUmJ12s1qSP2AX2zDNzXVE1ofQ9VjIcYNCdBWYnqu1+e9TZo670q8WqybJMmY+VoJ0rb3CwPEOMPa8+G7Xqdwsm2ZrxTgCF1HcCgebDnsPoQ4fuuO2O9b8ofVwZ8Pt8Lw4IOYJ3RujeW5HPEhptOsCgL7alTBY8ulaL0Gv2XZi5RMhpsxGtasH/a2Xg/I2Ggp7nOke4aBxqxerjXT2Vi0RO7eWdpifwjpjsZj53imNc4expaxivw/xeLdbi5jNXGoy57/AG7D11XrjcRGyixjHX5YWChmoauroBpquvJxVwsNeLJuSRrczQ7bwowNXELf36x3ty2xTZ4dxX8NsRFrHeXa5i1gPsR/0tVxeDkiOWRtHXUEOaa7EaFforF4mR4c2vBjd5XeJl8R4I1c4Ha960ped8b/AA5jdI7LiXM+YHIJRrr3C6KZ4lzXxTWXmVotsxv4b4lusUkM41oW6J5PYA6fute4hwjEYc1NDJHXUi2//Qsfut4tE+GXGYdNRVF6eURVRARERUtERBFURB9LcuWeJACLyg+GD5Q0Eb9b3WmWuxgcV4cjX1YB1G1iiF6jU9PNome4+HqPH8IWPZLCD4T2sNEvfE17ibYH5fITWyyUfGGvlbBHHKcrB53NA6fDo47dzSwXC/xJw3gHCy+KIywRsLgaicTecUaoddNVlYeYMGBFG/FCR2V+TERSMIgiDra6SMWdf0bi9lw5azXq0bb4v3dx1/LKvizjK9ocOzgHC/quFvCoxr4bB7MaFyGcZWzMmZiIX7OYwso2Rlo6nZcuExsUjqDrI3GuhWUfjuG3HvUxpHwdSST6kkr4dDfRZdsQoUEIb2XPbK6qYOmvYjB1qsNjsMdbNaFbVj3CrGy1niMo1+qVybbRh01fEx66a9FgcRDlJ/T/AEW1viFXqXHYV+6wmOg1ojU7+i7aS4skRE6YxkxZtqNF3ouI3qTZJGnp1WNkZl9R3XH7Lbyz8Nmj4y7z9ToAOw/2lkYuL2RZ1IH0taWJiFyx4wil4mj1FvtvEXFwBV7WfsuzDx1rcut6An0JK0RuOIBHpSoxnqvHB73Dfnc7ytADK0vQjod1xYjnzEuzEuaA4BpyivKLpt9BrstJPEdbJ12XE/G2uefTRad6dEZeLcHc4YhzqdKQXNDPL5QGUAG6dNAuE8yTDaR/lGVtPLfpp0WpHGFVszz/AJ0V/TV+j3m34bmeUHzOJZ81kk/QlZHE8wtGUh2rhoSQBS0DO/v9L3UeDtm0G3ZaVxxDG/7u27x80a2TsRrdfZd1vM41adWk5nNsEfXv7LzvKf1boJ3jr6aFe+P086btiuVuH4o2wfl3u2dCPKT/AMLr7UtQ45yriMJ5ngPhsVMy8uu2YbtOy5MNx6RhGu2lbLN4HnRwoPOYEFpBAIII2N7r3WbVY2pEtHVW9Y7lPBYpni4KYQTEEuw0jf4Tj/I4fB7UtP4lwufDP8OeN8bumYUHju12zh6hbVvFvDGaTV1ERCvbwKIiKiIURH0ilqhFEpEtBuXInNsuHd4Oeo3ODqNHN0IsiwfYjZbgyR35rRgETgSw2Mzr1sAdF5Nw55bKx4JGQ5rFf306r0DhXFmxhsuIkYJHjLHmc1gA3y61S4M2PjabV+YfQwWi9Ypb4n5+noEeKAGpXHJxJo6jVawzFzzguib4jW7mNzH9N9CsbLxB40OYe4rVfFtSd6fpMWOs15RqYbDxDHgg0VrU0uZwF7mvZdfEcQPfddXD4qy4/pjkcPcN0/qurDTXljnjrp9YzFGzRoDQd1g8XIXE6rnle49yunIx3Y/ZfRrPT5l8dY704g6jp9fVccrGnVvlPboVXtK4SCtohyXmHy4kbqBwRfJC005pnTlyhMo7rrkpmTinuOfKEJC4LUTinuOwJwE/NHouuUtXhCe7LnOKcp47lxKJwhOcuYSknUgep2HqVsEHJHEpWiSCOLExkWHwYrDvvuMuYOsdRS1ldzhvF58O7NDI+M3ZDSQCfUJx+k5y7PEeCYvDkjEYaeKty6N2Xcj4hp0XTZ01XoPB/wARBK0RYgA5vIQex9KohajzHgIosQRGaik8zTuGnqL7a/ReeM/L3GSJdWLGvY4U66Wbw/GfEAjlAkjPyP8AML7i9votdfhnNPsu9wxutkfdY31EbhtHblx3LrXEnDPH/okOV3s150d7FYOaJzHFr2lrhu1worcXYfMLaM3cdQrNBHNEGloLmk2H/tlO46q4s3LqWF66aUou1jsGYnZTdHVpPULrLqZIqoiKoCtKJaAVVCqg+mPrUbqE2bOpURBvPI3ODcNljuGDZry4ENnbr8T9mO/mIper4fB4PFszxhr7vMAQ4gg0bI391+cFunKvPpgbHDKMjGO1miBD3N3yvA+LXqufP6SnqI+rfbXB6rL6Wd13MT5j/j0+XlTCg/Dv91jn8tQ5yxookFo0GpPRTD83eK1ro3MkD3UxoNuAurI3UxXMTRZLSKNXR+ILg/t+XHL6Mf1rFkrqZ0w2J4fG2xQH0Wv8RYAdLWb4txxj3EtaQa81Dd3evVavjca49CPcLox+ntVjk/qGO8dOq6EdV8yYRtE9guvicRW5q10/zp1FkrrjHLktn34hyTRALpOcvqSUlca01pjuZ8iIgUVVERUVREQEREBEREAVz4jGOkADzZboD1I9VwIhpmuCTteRG8gPA/hk/OP0e/ZZeTCAat0sXXfutOa8ggjQgggjcEbFbhwjigxLadQmbqR0cP1j+4XHnxTvlDal+tPqKbLr07rv/lWv84+h7+i4ZIADqND9KPT6FcuHPh1+h10R0I/uuasfMPU2+2t8chDi6xlezbrmb/trBLeOYOHtfGZWfGwa1sWrSCvpY7brtz61L5REXsFVEVFtVfKqiqiiqAlqKojkgxD43Zo3ujcNnMcWO+41XYHGMSP/ADzaXvI52+5orpoV65T9pNYn4dl/EpjvI862fMbJ91wmUnqfqSV8IpMzJFYhSSogVUekSkREEVURREREEREBERFFFVEQREQCuXCYt8T2yMNOabHY9wfQriRPKt/wmPjxDA8UCdHNPTTUL7dCRpVg/f391ouDxroz5Todx3Wy4Pj9gWc1bd6XJbBMd1X3Ij8mWhfoWO+F2n1Wk8YwfhTPZ03b6tPX+q2x/FIqvSzrR3WG4jK3EAD5m6Nf19iveGLR1MJe9PMNeRfc0JaSDuF8LoQVURFERVVEtUKKoCIqoAREtFFFUQAqoiC0oiICIiAiIUBERAREQEQKFEERRUVFEUFVY8g2NCOoXzaIrvQ8SNU4Bw6E7g+6+ZOIndoDT1r+q6aL1tnwq+nvJ1K+URR7RVEUUCqIqiKoiCqBEUFKgRFSRVEUBERFAhUREUIiIoiiIAVREBERAUREgERFUFERFERFEERFVAiIoj//2Q==">
+                                </a>
+                                <div class="media-body">
+                                    <div class="span6">
+                                        <h4 class="media-heading">(Código de la puesta)</h4>
+                                        <p><a href="#" title="Acceder a la ficha de HMPK Fancy Dragon MC001">Ficha</a></p>                                        
+                                        <p><span class="label label-info">Última nota</span> Última nota apuntada, fecha: 13/05/2013</p>    
+                                    </div>
+                                    <div class="span6">
+                                        <!-- contenido en la parte derecha -->
+                                        <div class="panel">
+                                            prueba
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="media well well-small">
+                                <p>Progreso de la puesta</p>
+                                <!-- barra de progreso -->
+                                <div class="progress">
+                                    <div class="bar bar-danger" style="width: 10%;"></div>
+                                    <div class="bar bar-warning" style="width: 20%;"></div> 
+                                    <div class="bar bar-success" style="width: 70%;"></div>
+
+                                </div>
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" width="100" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBg8QEBAQDxAPDw8PEA8PEA8PDw8OEA8QFBAVFBQQFRQXHCYeFxkjGRUUHy8gIycpLSwsFR4xNTAqNSYrLCkBCQoKDgwOFw8PFykcHBwpKSkpLCkpKSkqKSkpKSwpKSktKSkpKSkpKSkpKSkpKSkpKSkpKSksKSkpKSkpKSksKf/AABEIALEBHAMBIgACEQEDEQH/xAAcAAEBAAIDAQEAAAAAAAAAAAAAAQUGAwQHAgj/xAA4EAABBAAEBAQEBAYCAwEAAAABAAIDEQQSITEFBkFREyJhcTJCgZEHFFKhI2KxweHwctFDc5IV/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAEDBAIFBv/EACgRAQACAgIBBAEDBQAAAAAAAAABAgMREiExBBNBUTIUInEFFWHB0f/aAAwDAQACEQMRAD8A8SVCBEZqiIgIiIgqoqqCIiCIvpKQRKVpWlBAiFRUVRVAmhKRVRQERFQREQEREEREUUREQRVEQKUVQoPlFUVBVEUBERVFUVpEBAiqAiKKEiqBFQVUQKCqEKoivlVCiu3kCUlKoqUqiiAiIoIiFEBRVQqgiIooiqiAiKICIioqIiAiqloioiICqgQIFLbOVuSRiGCfEudHCT/DYzSSUD57Pwsux3NFa9wvh7p5WRM3cdSTQa35nE+y9YjcxrI42fCxrWDpQAoALxadDGS8m8PArwCfUzy5vvax+I/DiF5b4E74S52onAkY0HsWgHT1W2QxfNlztb0PUr7ncwAFzgSd2i7Cx5rqXnfN/wCHeJ4dTnPZPEWh3iRAgZT81WbH9Fqy9jx+HE0ZaaYMpA0sjStivJuJ8Nkw8hikGoAII1DmnZwPZa1tsdVAiL2giIgIiFAUtECBSqIgiiFRBVCqloIiIgIiIoiKICIioqJaIgiqiAiKoAVtQJSDK8CaTI3Lu17CaPy3r/vqvRAwtsHQitOuoBH7ELy7ATlksbgapzfsTRH2tehYTFEEdzuPTZZ3I8tu4dLUdAg30/ujmHUFrXF1DNlsgenZYrC4rL10q66hZmDGuAB0oihoNq3XJLbTruwx+IMLgLBC17jvAxjI/D8rZWEmF5+RxOrD/KdvsVmcTi3HVx20AFj7LouzDUWD6r1WUtDyWWJzHOY8Fr2OLXNO7XA0R918rYedsAY8T4tU3EsEljYyDyyD3sAn/kteXXE7hmKrNcP5OxkwDsgiY7Z0xyE+oZ8X7LZOF8gYUFoxMr5HkgBjHNhY4n5RfmP3Ccog/loB+imYd17Z/wDgYPD5fChgZY+LwwX3sWkuF2DY+iy+A4S94vVoH00XjmPz6CO4RfofF8pYeZp8eKF/lIa58THuZY3BOtryLnrkiTh72yAZsLM5zYpBdNeNTE69jWo7i+ysWiUaqERF7EpRfQUKKihVUVREVRRRES0BRLRARAioqJaKC0oiILSAKhZ3l3lgYq3PxMGHjbuZHDOR3azqvdazbqGWTJXHXlbwxWE4dNLfhRSS1qfDY59e9bLuYXlnGyuLI8NO54BOUsLDQ3rNV/Rb9w+CfAlreEF8jq/i4h8RySDsWHt0IWxYHEycRayKfESQYmN+dhADQXiwKIAPXZWYrHmXLGfNfulY1PjbxPF4GWF2WaOSF2oqRjmGxvVjVbHh+LggE6UNPW16e7CTNke3EVjGtaY54JmZ2PZVZ498rq7brz3nDkv8kYZIy92GnBLC7UscCSY79BW+qxvNfiXVim9vzrqf8eHdweJB8wBcMotxND3WewmLJBABvQafC2+pWj8LxW4OrgNB8rRe62fAyEZaeASA4jcDt9Vz3jTsq2GXDAEAvZt8VEgf5XVa3cHX1OlrtQYMyNBLiSbLWgan1K4XxkEg/E3cuO3pSyie1mGE5h4OMREYtA6w+CyRlnAII1+V4oH/AIgrr8vcrwYapHjxsQBo8/BGepa3a/UrPzxNeAHO0tpzfDRa4EELHzOLS4B15CBdEWP9r7rbl0wmHbxD3aEb35s5qvX1Wkc3Pl8cPa7y5Whmt3pRA+vT1XomHwcczQ4kitmgb+6+sBgWMmDixpDXg5SAQDejqPULKPURE6h0fppmu15Y4NK4wslLnPrPIX246DMbJ+y3PjE3hM8KJvmvzkaBumwXUw2KZE+WUnQRa+pdK0f2KxGJ48XZvVznWdSSTZWdss2npaYOu2Yjkc6Fxo00WT7LB81RDE8J4jG91+HB+ajqiWvhcH3r3Gns4rceHTRQ4dpfq5wt4PcjUey8n5s5ibBFj42GxLFLho2knaSRrSfoyz9FrxndZiUmI1O4eTkKUqou1zC+Svq1ERESlEBERCBRVEVEAREBFFVVWkRZrhHLzpQ1xo5/ga12p1rzaaaqJOoYVVbhxPkVrA0CR0U9eeOQZo2noMw81etFY2fkXiLNfyznt3zRvjkBB2IAN/spyg0wTQs9w/hj3OYzJnG/l1OqwzonxuAex0bgdpGlp/dZ/lvjcsErZGjOGkEtug4dleXXTxMblucHEMTA+NkBc3MQ0MeNLJr6arbeOYTBxjCjibvyuImkGrBdBvzktuq01Omqw/GuKnh+NgccOJPzEbJHRT2fyhc4eZjmWHV6rHc2MnxGOL5cmJifkLXU5hjj6xh2nqdv88kZqxfjMeY3v/Tf2t15R8S36biEmDmGHyvxeHxLGDD4hoaZGF2gDj841GuiwH4g8BlPDJM7w7E4aTxWQtBt8emd1dTlJN/yrm4lxuPxYXwZ/wCAzI0PJo9r7kd1gOM8wzym3vcaBG9mu3svNMvOsWmNT9PftTW3Ty+DF/MLFVY7raOFcRtuga3NuSdmgf791guI8PDXOczYkmu1rqQzlpGuh/Zb7i0Lri9N4bxQkgguc6rsHKGt2Xde4vPiChV6HXX/ALWi4Xi5AoOAHlGnQdgs9Fxga9GtG+9lc81mHvyzUmJ12s1qSP2AX2zDNzXVE1ofQ9VjIcYNCdBWYnqu1+e9TZo670q8WqybJMmY+VoJ0rb3CwPEOMPa8+G7Xqdwsm2ZrxTgCF1HcCgebDnsPoQ4fuuO2O9b8ofVwZ8Pt8Lw4IOYJ3RujeW5HPEhptOsCgL7alTBY8ulaL0Gv2XZi5RMhpsxGtasH/a2Xg/I2Ggp7nOke4aBxqxerjXT2Vi0RO7eWdpifwjpjsZj53imNc4expaxivw/xeLdbi5jNXGoy57/AG7D11XrjcRGyixjHX5YWChmoauroBpquvJxVwsNeLJuSRrczQ7bwowNXELf36x3ty2xTZ4dxX8NsRFrHeXa5i1gPsR/0tVxeDkiOWRtHXUEOaa7EaFforF4mR4c2vBjd5XeJl8R4I1c4Ha960ped8b/AA5jdI7LiXM+YHIJRrr3C6KZ4lzXxTWXmVotsxv4b4lusUkM41oW6J5PYA6fute4hwjEYc1NDJHXUi2//Qsfut4tE+GXGYdNRVF6eURVRARERUtERBFURB9LcuWeJACLyg+GD5Q0Eb9b3WmWuxgcV4cjX1YB1G1iiF6jU9PNome4+HqPH8IWPZLCD4T2sNEvfE17ibYH5fITWyyUfGGvlbBHHKcrB53NA6fDo47dzSwXC/xJw3gHCy+KIywRsLgaicTecUaoddNVlYeYMGBFG/FCR2V+TERSMIgiDra6SMWdf0bi9lw5azXq0bb4v3dx1/LKvizjK9ocOzgHC/quFvCoxr4bB7MaFyGcZWzMmZiIX7OYwso2Rlo6nZcuExsUjqDrI3GuhWUfjuG3HvUxpHwdSST6kkr4dDfRZdsQoUEIb2XPbK6qYOmvYjB1qsNjsMdbNaFbVj3CrGy1niMo1+qVybbRh01fEx66a9FgcRDlJ/T/AEW1viFXqXHYV+6wmOg1ojU7+i7aS4skRE6YxkxZtqNF3ouI3qTZJGnp1WNkZl9R3XH7Lbyz8Nmj4y7z9ToAOw/2lkYuL2RZ1IH0taWJiFyx4wil4mj1FvtvEXFwBV7WfsuzDx1rcut6An0JK0RuOIBHpSoxnqvHB73Dfnc7ytADK0vQjod1xYjnzEuzEuaA4BpyivKLpt9BrstJPEdbJ12XE/G2uefTRad6dEZeLcHc4YhzqdKQXNDPL5QGUAG6dNAuE8yTDaR/lGVtPLfpp0WpHGFVszz/AJ0V/TV+j3m34bmeUHzOJZ81kk/QlZHE8wtGUh2rhoSQBS0DO/v9L3UeDtm0G3ZaVxxDG/7u27x80a2TsRrdfZd1vM41adWk5nNsEfXv7LzvKf1boJ3jr6aFe+P086btiuVuH4o2wfl3u2dCPKT/AMLr7UtQ45yriMJ5ngPhsVMy8uu2YbtOy5MNx6RhGu2lbLN4HnRwoPOYEFpBAIII2N7r3WbVY2pEtHVW9Y7lPBYpni4KYQTEEuw0jf4Tj/I4fB7UtP4lwufDP8OeN8bumYUHju12zh6hbVvFvDGaTV1ERCvbwKIiKiIURH0ilqhFEpEtBuXInNsuHd4Oeo3ODqNHN0IsiwfYjZbgyR35rRgETgSw2Mzr1sAdF5Nw55bKx4JGQ5rFf306r0DhXFmxhsuIkYJHjLHmc1gA3y61S4M2PjabV+YfQwWi9Ypb4n5+noEeKAGpXHJxJo6jVawzFzzguib4jW7mNzH9N9CsbLxB40OYe4rVfFtSd6fpMWOs15RqYbDxDHgg0VrU0uZwF7mvZdfEcQPfddXD4qy4/pjkcPcN0/qurDTXljnjrp9YzFGzRoDQd1g8XIXE6rnle49yunIx3Y/ZfRrPT5l8dY704g6jp9fVccrGnVvlPboVXtK4SCtohyXmHy4kbqBwRfJC005pnTlyhMo7rrkpmTinuOfKEJC4LUTinuOwJwE/NHouuUtXhCe7LnOKcp47lxKJwhOcuYSknUgep2HqVsEHJHEpWiSCOLExkWHwYrDvvuMuYOsdRS1ldzhvF58O7NDI+M3ZDSQCfUJx+k5y7PEeCYvDkjEYaeKty6N2Xcj4hp0XTZ01XoPB/wARBK0RYgA5vIQex9KohajzHgIosQRGaik8zTuGnqL7a/ReeM/L3GSJdWLGvY4U66Wbw/GfEAjlAkjPyP8AML7i9votdfhnNPsu9wxutkfdY31EbhtHblx3LrXEnDPH/okOV3s150d7FYOaJzHFr2lrhu1worcXYfMLaM3cdQrNBHNEGloLmk2H/tlO46q4s3LqWF66aUou1jsGYnZTdHVpPULrLqZIqoiKoCtKJaAVVCqg+mPrUbqE2bOpURBvPI3ODcNljuGDZry4ENnbr8T9mO/mIper4fB4PFszxhr7vMAQ4gg0bI391+cFunKvPpgbHDKMjGO1miBD3N3yvA+LXqufP6SnqI+rfbXB6rL6Wd13MT5j/j0+XlTCg/Dv91jn8tQ5yxookFo0GpPRTD83eK1ro3MkD3UxoNuAurI3UxXMTRZLSKNXR+ILg/t+XHL6Mf1rFkrqZ0w2J4fG2xQH0Wv8RYAdLWb4txxj3EtaQa81Dd3evVavjca49CPcLox+ntVjk/qGO8dOq6EdV8yYRtE9guvicRW5q10/zp1FkrrjHLktn34hyTRALpOcvqSUlca01pjuZ8iIgUVVERUVREQEREBEREAVz4jGOkADzZboD1I9VwIhpmuCTteRG8gPA/hk/OP0e/ZZeTCAat0sXXfutOa8ggjQgggjcEbFbhwjigxLadQmbqR0cP1j+4XHnxTvlDal+tPqKbLr07rv/lWv84+h7+i4ZIADqND9KPT6FcuHPh1+h10R0I/uuasfMPU2+2t8chDi6xlezbrmb/trBLeOYOHtfGZWfGwa1sWrSCvpY7brtz61L5REXsFVEVFtVfKqiqiiqAlqKojkgxD43Zo3ujcNnMcWO+41XYHGMSP/ADzaXvI52+5orpoV65T9pNYn4dl/EpjvI862fMbJ91wmUnqfqSV8IpMzJFYhSSogVUekSkREEVURREREEREBERFFFVEQREQCuXCYt8T2yMNOabHY9wfQriRPKt/wmPjxDA8UCdHNPTTUL7dCRpVg/f391ouDxroz5Todx3Wy4Pj9gWc1bd6XJbBMd1X3Ij8mWhfoWO+F2n1Wk8YwfhTPZ03b6tPX+q2x/FIqvSzrR3WG4jK3EAD5m6Nf19iveGLR1MJe9PMNeRfc0JaSDuF8LoQVURFERVVEtUKKoCIqoAREtFFFUQAqoiC0oiICIiAiIUBERAREQEQKFEERRUVFEUFVY8g2NCOoXzaIrvQ8SNU4Bw6E7g+6+ZOIndoDT1r+q6aL1tnwq+nvJ1K+URR7RVEUUCqIqiKoiCqBEUFKgRFSRVEUBERFAhUREUIiIoiiIAVREBERAUREgERFUFERFERFEERFVAiIoj//2Q==">
+                                </a>
+                                <div class="media-body">
+                                    <div class="span6">
+                                        <h4 class="media-heading">(Código de la puesta)</h4>
+                                        <p><a href="#" title="Acceder a la ficha de HMPK Fancy Dragon MC001">Ficha</a></p>                                        
+                                        <p><span class="label label-info">Última nota</span> Última nota apuntada, fecha: 13/05/2013</p>    
+                                    </div>
+                                    <!-- columna derecha -->
+                                    <div class="span6">
+                                        <!-- contenido col derecha -->
+                                        <div class="panel">
+                                            prueba
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel marginTop20px">
+                        <p class="lead">Ejemplares en seguimiento<p>
+
+                        <ul class="media-list">
+                            <li class="media alert alert-error">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://fbexternal-a.akamaihd.net/safe_image.php?d=AQBLH4qw-NgT80w_&w=100&h=100&url=http%3A%2F%2Fmedia-cache-ak0.pinimg.com%2F550x%2F9b%2Fe7%2F34%2F9be7341e7a701b03b475ee1f5606128b.jpg&crop">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">HMPK Fancy Dragon MC001(Código del betta)</h4>
+                                    <p><a href="#" title="Acceder a la ficha de HMPK Fancy Dragon MC001">Ficha</a></p>
+                                    <p><span class="label label-warning">Atención</span> El pez tiene comienzo de pudredumbre en aletas, se aplica ekctol, fecha: 13/05/2013</p>
+                                    <p><span class="label label-info">Última nota</span> Última nota apuntada, fecha: 13/05/2013</p> 
+                                </div>
+                            </li>
+
+                            <li class="media panel">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://fbexternal-a.akamaihd.net/safe_image.php?d=AQB8FT4mPzt7yMBM&w=100&h=100&url=http%3A%2F%2Fmedia-cache-ec4.pinimg.com%2F550x%2F34%2F51%2F5d%2F34515d479287229d769207136808adad.jpg&crop">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">HMPK Fancy Dragon MC001(Código del betta)</h4>
+                                    <p><a href="#" title="Acceder a la ficha de HMPK Fancy Dragon MC001">Ficha</a></p>
+                                    <p><span class="label label-info">Última nota</span> Última nota apuntada, fecha: 13/05/2013</p> 
+                                </div>
+                            </li>
+
+                            <li class="media panel">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAaHTyVNtCgcX3O&w=100&h=100&url=http%3A%2F%2Fmedia-cache-ak1.pinimg.com%2F550x%2Fa9%2Fb1%2F15%2Fa9b115c7b23a7af4b462f0ee018c5a41.jpg&crop">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">HMPK Fancy Dragon MC001(Código del betta)</h4>
+                                    <p><a href="#" title="Acceder a la ficha de HMPK Fancy Dragon MC001">Ficha</a></p>
+                                    <p><span class="label label-info">Última nota</span> Última nota apuntada, fecha: 13/05/2013</p> 
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="container-fluid marginTop20px">
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <div class="panel">
+                                    <p>Accede a todas las herramientas de Free Betta Control desde tu escritorio</p>
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="span6">
+                                <div class="panel">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel marginTop20px">
+                        <p class="lead">Mercado FBC</p>
+                        <p>Accede a todas las herramientas de Free Betta Control desde tu escritorio</p>
+                    </div>
+                </div>                
+
+            </div><!-- row-fluid -->
+        </div><!-- container-fluid -->
+    </body>
+</html>
